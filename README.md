@@ -1,4 +1,4 @@
-# QbitTorrent Sync
+# qBitTorrent Sync
 Sync qBittorrent data between multiple OS installs.
 
 # Installation:
