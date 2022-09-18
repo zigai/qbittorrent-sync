@@ -1,5 +1,5 @@
 # QbitTorrent Sync
-Sync qBittorrent data between multiple OSs.
+Sync qBittorrent data between multiple OS installs.
 
 # Installation:
 ``` bash
@@ -36,10 +36,10 @@ positional arguments:
 
 options:
   -h, --help          show this help message and exit
-  -host HOST          Defaut: localhost
-  -port PORT          Defaut: 8080
-  -username USERNAME  Defaut: admin
-  -password PASSWORD  Defaut: adminadmin
+  -host HOST          Default: localhost
+  -port PORT          Default: 8080
+  -username USERNAME  Default: admin
+  -password PASSWORD  Default: adminadmin
 ```
 
 ### As Python package:
