@@ -1,1 +1,1 @@
-# qbittorrent-migrate
+# QbitTorrent Sync
