@@ -1,5 +1,5 @@
 # qBitTorrent Sync
-Sync qBittorrent data between multiple OS installs.
+Sync qBitTorrent data between multiple OS installs.
 
 # Installation:
 ``` bash
