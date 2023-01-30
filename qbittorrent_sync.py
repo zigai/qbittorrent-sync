@@ -97,7 +97,9 @@ class QbitTorrentSync:
 def main():
     import argparse
 
-    ap = argparse.ArgumentParser(description="Sync qBittorrent data between multiple OSs")
+    ap = argparse.ArgumentParser(
+        description="Sync qBitTorrent information between various operating system installations."
+    )
     ap.add_argument("action", type=str, help="import/export")
     ap.add_argument("path", type=str, help="File path")
 
