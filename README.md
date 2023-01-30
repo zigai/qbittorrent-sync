@@ -1,15 +1,15 @@
 # qBitTorrent Sync
-Sync qBitTorrent data between multiple OS installs.
+Sync qBitTorrent information between various operating system installations.
 
-# Installation:
+## Installation:
 ``` bash
 git clone https://github.com/zigai/qbittorrent-sync.git
 cd qbittorrent-sync
 pip install -r requirements.txt
 ```
-Enable WebUI in qBittorrent: Tools -> Preferences -> Web UI
+Make sure to enable the WebUI in qBittorrent by going to ```Tools -> Preferences -> Web UI```.
 
-# Example exported torrent:
+## Example exported torrent:
 ``` json
 {
     "name": "ubuntu-mate-22.04.1-desktop-amd64.iso",
@@ -19,16 +19,18 @@ Enable WebUI in qBittorrent: Tools -> Preferences -> Web UI
     "tags": []
 }
 ```
-# Usage:
+## Usage:
 
 
-### As CLI:
-NOTE: When importing the script will try to convert torrent paths to unix paths by default. You can overwrite this behaviour when using this script as a Python package. 
+### As a Command Line Interface:
+**NOTE**:
+The script will attempt to convert torrent paths from Windows to Unix paths by default. It will map Windows drives to /mnt/. ``` eg. "D:\folder\file.torrent" to "/mnt/d/folder/file.torrent" ```.
+This can be changed by using the script as a Python package and defining a custom function to transform paths.
 
 ```
 usage: qbittorrent_sync.py [-h] [-host HOST] [-port PORT] [-username USERNAME] [-password PASSWORD] action path
 
-Sync qBittorrent data between multiple OSs
+Sync qBitTorrent information between various operating system installations.
 
 positional arguments:
   action              import/export
@@ -40,6 +42,7 @@ options:
   -port PORT          Default: 8080
   -username USERNAME  Default: admin
   -password PASSWORD  Default: adminadmin
+
 ```
 
 ### As Python package:
@@ -47,12 +50,12 @@ options:
 ``` python
 from qbittorrent_sync import QbitTorrentSync
 
-def custom_path_transform(path: str) -> str:
+def custom_path_func(path: str) -> str:
     # Custom function for transforming torrent save path when importing
     ...
 
-client = QbitTorrentSync(path_transform_func=custom_path_transform)
+client = QbitTorrentSync(path_transform_func=custom_path_func)
 client.import_torrents("./torrents.json")
 ```
-# License
+## License
 [GPLv3](LICENSE)
