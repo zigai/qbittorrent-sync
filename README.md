@@ -1,7 +1,7 @@
 # qBitTorrent Sync
 Sync qBitTorrent information between various operating system installations.
 
-## Installation:
+## Installation
 ``` bash
 git clone https://github.com/zigai/qbittorrent-sync.git
 cd qbittorrent-sync
@@ -19,10 +19,10 @@ Make sure to enable the WebUI in qBittorrent by going to ```Tools -> Preferences
     "tags": []
 }
 ```
-## Usage:
+## Usage
 
 
-### As a Command Line Interface:
+### As a Command Line Interface
 **NOTE**:
 The script will attempt to convert torrent paths from Windows to Unix paths by default. It will map Windows drives to /mnt/. ``` eg. "D:\folder\file.torrent" to "/mnt/d/folder/file.torrent" ```.
 This can be changed by using the script as a Python package and defining a custom function to transform paths.
@@ -45,7 +45,7 @@ options:
 
 ```
 
-### As Python package:
+### As Python package
 
 ``` python
 from qbittorrent_sync import QbitTorrentSync
