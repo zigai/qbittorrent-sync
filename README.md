@@ -24,7 +24,7 @@ Make sure to enable the WebUI in qBittorrent by going to ```Tools -> Preferences
 
 ### As a Command Line Interface
 **NOTE**:
-The script will attempt to convert torrent paths from Windows to Unix paths by default. It will map Windows drives to /mnt/. ``` eg. "D:\folder\file.torrent" to "/mnt/d/folder/file.torrent" ```.
+The script will attempt to convert torrent paths from Windows to Unix paths by default. It will map Windows drives to /mnt/. ``` eg. "D:\folder\file.ext" to "/mnt/d/folder/file.ext" ```.
 This can be changed by using the script as a Python package and defining a custom function to transform paths.
 
 ```

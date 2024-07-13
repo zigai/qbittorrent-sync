@@ -1,6 +1,6 @@
 import qbittorrentapi
 from stdl import fs
-from stdl.str_u import colored
+from stdl.st import colored
 
 
 def is_windows_path(path: str):
@@ -81,7 +81,7 @@ class QbitTorrentSync:
 
     def import_torrents(self, path: str):
         current = [i["magnet_uri"] for i in self.get_torrents()]
-        fs.assert_paths_exist(path)
+        fs.ensure_paths_exist(path)
         data = fs.json_load(path)
         data = [i for i in data if i["urls"] not in current]
         print(f"Adding {len(data)} torrents ...")
@@ -106,7 +106,9 @@ def main():
     ap.add_argument("-host", type=str, default="localhost", help="Default: localhost")
     ap.add_argument("-port", type=int, default=8080, help="Default: 8080")
     ap.add_argument("-username", type=str, default="admin", help="Default: admin")
-    ap.add_argument("-password", type=str, default="adminadmin", help="Default: adminadmin")
+    ap.add_argument(
+        "-password", type=str, default="adminadmin", help="Default: adminadmin"
+    )
 
     args = ap.parse_args()
     if args.action not in ["import", "export"]:
