@@ -1,3 +1,5 @@
+from typing import Callable, Optional
+
 import qbittorrentapi
 from stdl import fs
 from stdl.st import colored
@@ -39,11 +41,11 @@ def same_path(path: str):
 class QbitTorrentSync:
     def __init__(
         self,
-        host="localhost",
-        port=8080,
-        username="admin",
-        password="adminadmin",
-        path_transform_func=win_to_unix_path,
+        host: str = "localhost",
+        port: int = 8080,
+        username: str = "admin",
+        password: str = "adminadmin",
+        path_transform_func: Callable[[str, str], str] = win_to_unix_path,
     ) -> None:
         self.client = qbittorrentapi.Client(
             host=host,
