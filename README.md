@@ -1,5 +1,5 @@
 # qBitTorrent Sync
-Sync qBitTorrent information between various operating system installations.
+Sync qBitTorrent information between various operating system installations that share a hard drive.
 
 ## Installation
 ``` bash
