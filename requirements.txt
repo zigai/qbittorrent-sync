@@ -1,2 +1,2 @@
 qbittorrent-api>=2024.5.63
-stdl==0.5.4
+stdl>=0.5.5
